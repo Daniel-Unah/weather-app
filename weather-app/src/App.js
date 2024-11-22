@@ -1,15 +1,11 @@
-import logo from './logo.svg';
 import './App.css';
+import WeatherWidget from './Weather';
 
 function App() {
   return (
     <div className="App">
-      return (
-        <div>
-          <h1>Weather Forecast App</h1>
-          <Weather />
-        </div>
-      );
+      <h1 className = "center">Weather Forecast App</h1>
+      <WeatherWidget />
     </div>
   );
 }
