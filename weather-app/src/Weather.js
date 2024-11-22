@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import API_KEY from config.js;
+import API_KEY from './config.js'
 
 
 const WeatherWidget = () => {
