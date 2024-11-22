@@ -1,0 +1,1 @@
+Making a basic weather web application using React.js and CSS. Pulling data using OpenWeatherMap, consulted this guide for help: https://medium.com/@harshanabatagalla/building-a-weather-forecast-app-with-react-and-openweathermap-api-acb57627118b.

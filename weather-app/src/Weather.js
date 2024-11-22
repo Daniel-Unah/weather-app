@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import API_KEY from config.js;
 
 
 const WeatherWidget = () => {
     const [city, setCity] = useState("")
     const [weatherData, setWeatherData] = useState(null)
 
-    const API_KEY = "e7bc058e654d338e18c72b4d63e3f419"
     const PATHWAY = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${API_KEY}`
 
     const fetchWeatherData = async () => {
