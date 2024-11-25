@@ -1,78 +1,79 @@
-.center {
+.page-title {
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
-/* Center the entire widget on the page */
-.weather-widget {
-  border-radius: 25px;
-  border: 2px solid #132320;
+/* Center the widget on the page */
+.weather-container {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start; /* Align items towards the top */
   align-items: center;
-  justify-content: flex-start;
-  min-height: 100vh; /* Full viewport height */
-  background-color: #f3f4f6; /* Light background for contrast */
-  padding-top: 20px;
+  height: 100vh; /* Full viewport height */
+  padding-top: 50px; /* Add space from the top */
+  background-color: #f0f8ff; /* Light blue background */
+  font-family: Arial, sans-serif;
 }
 
-/* Styling the form */
-.weather-form {
-  margin-bottom: 20px;
-  display: flex;
-  gap: 10px;
-}
-
-.city-input {
-  padding: 10px;
-  font-size: 16px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-}
-
-.search-button {
-  padding: 10px 15px;
-  font-size: 16px;
-  border: none;
-  border-radius: 5px;
-  background-color: #007bff;
-  color: white;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.search-button:hover {
-  background-color: #0056b3;
-}
-
-/* Styling the weather box */
+/* The weather widget box */
 .weather-box {
-  width: 90%;
-  max-width: 500px;
-  background-color: #ffffff;
+  background-color: #ffffff; /* White background */
   padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 25px;
+  border: 2px solid #132320; /* Green border */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  width: 400px; /* Set box width */
+  display: grid;
+  grid-template-rows: auto auto auto; /* Arrange elements in rows */
+  gap: 15px; /* Spacing between rows */
   text-align: center;
 }
+/* Weather form layout */
+.weather-form {
+  display: flex; /* Align items side by side */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Align vertically */
+  gap: 10px; /* Add space between input and button */
+  margin-bottom: 20px; /* Space below the form */
+}
 
-/* Styling the grid for weather details */
-.weather-grid {
+/* Input field */
+.weather-form input[type="text"] {
+  flex: 1; /* Allow the input field to shrink if necessary */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  height: 40px; /* Match the height of the button */
+  box-sizing: border-box; /* Include padding in width/height calculation */
+}
+
+/* Search button */
+.weather-form button {
+  padding: 10px 20px;
+  background-color: #132320; /* Green background */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  height: 40px; /* Match the height of the input field */
+  display: flex; /* Ensure proper text alignment */
+  align-items: center; /* Vertically align text inside the button */
+}
+
+.weather-form button:hover {
+  background-color: #212121; /* Darker green on hover */
+}
+
+
+/* Weather data grid */
+.weather-data {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
   gap: 10px; /* Spacing between items */
-  margin-top: 20px;
+  text-align: left;
 }
 
-.weather-grid p {
-  margin: 0;
-  font-size: 14px;
-  color: #333;
-}
-
-/* Placeholder text style */
-.placeholder-text {
-  font-size: 18px;
-  color: #666;
+.weather-data p {
+  margin: 5px 0;
 }
