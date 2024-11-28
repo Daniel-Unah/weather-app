@@ -32,7 +32,6 @@ const WeatherWidget = () => {
     let realFeel = weatherData ? Math.ceil((weatherData.main.feels_like * 9/5) + 32): null
     let windSpeed = weatherData ? Math.ceil((weatherData.wind.speed) * 2.237): null
     let pressure = weatherData ? (weatherData.main.pressure * 0.02953).toFixed(2): null
-    let precipitationChance = weatherData ? Math.ceil(weatherData.hourly.pop * 100):null
     return(
         <div className = "weather-container">
             <form className = "weather-form" onSubmit={search}>
