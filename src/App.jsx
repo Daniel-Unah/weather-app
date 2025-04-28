@@ -1,4 +1,5 @@
 import './App.css';
+import './weatherWidget.css'
 import WeatherWidget from './weatherWidget.jsx';
 
 function App() {

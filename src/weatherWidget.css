@@ -1,0 +1,71 @@
+.weather-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh; 
+    padding-top: 50px; 
+    background-color: #f0f8ff; 
+    font-family: Arial, sans-serif;
+    color: #242424;
+  }
+  
+  .weather-box {
+    background-color: #ffffff; 
+    padding: 20px;
+    border-radius: 25px;
+    border: 2px solid #132320; 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    display: grid;
+    grid-template-rows: auto auto auto;
+    gap: 15px; 
+    text-align: center;
+    color: #242424;
+  }
+  
+  .weather-form {
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+    gap: 10px;
+    margin-bottom: 20px; 
+  }
+  
+  .weather-form input[type="text"] {
+    flex: 1; 
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 40px;
+    box-sizing: border-box;
+  }
+  
+  .weather-form button {
+    padding: 10px 20px;
+    background-color: #132320; 
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    height: 40px; 
+    display: flex;
+    align-items: center;
+  }
+  
+  .weather-form button:hover {
+    background-color: #212121;
+  }
+  
+  
+  .weather-data {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 10px;
+    text-align: left;
+  }
+  
+  .weather-data p {
+    margin: 5px 0;
+  }
