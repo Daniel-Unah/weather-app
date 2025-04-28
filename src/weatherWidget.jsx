@@ -13,5 +13,17 @@ const WeatherWidget = () => {
         } catch (error) {
             console.error(error)
         }
+    };
+    // after every render, fetch the weather data
+    useEffect(() => {
+        fetchWeatherData();
+    }, []);
+    const changedCity = (cityInput) => {
+        setCity(cityInput)
+    }
+    const search = (cityInput) => {
+        cityInput.preventDefault()
+        fetchWeatherData()
+        setCity("") // clear the input field after search
     }
 }
