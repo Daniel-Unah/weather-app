@@ -31,4 +31,30 @@ const WeatherWidget = () => {
     let realFeel = weatherData ? Math.ceil((weatherData.main.feels_like * 9/5) + 32): null
     let windSpeed = weatherData ? Math.ceil((weatherData.wind.speed) * 2.237): null
     let pressure = weatherData ? (weatherData.main.pressure * 0.02953).toFixed(2): null
+
+    return (
+        <div className = "weather-container">
+            <form className = "weather-form" onSubmit={search}>
+                <input type="text" placeholder="Enter city name" value = {city} onChange={(e) => changedCity(e.target.value)} />
+                <button type="submit">Search</button>
+            </form>
+            {weatherData ? (
+            <div className="weather-box">
+                <h2>
+                    {weatherData.name}, {weatherData.sys.country}
+                </h2>
+                <div className="weather-data">
+                    <p><strong>Temperature:</strong> {temp}°F</p>
+                    <p><strong>Description:</strong> {weatherData.weather[0].description}</p>
+                    <p><strong>Feels like:</strong> {realFeel}°F</p>
+                    <p><strong>Humidity:</strong> {weatherData.main.humidity}%</p>
+                    <p><strong>Pressure:</strong> {pressure} inHg</p>
+                    <p><strong>Wind Speed:</strong> {windSpeed} MPH</p>
+                </div>
+            </div>
+            ) : (
+                <p></p>
+            )}
+        </div>
+    );
 }
