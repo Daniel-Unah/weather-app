@@ -26,4 +26,9 @@ const WeatherWidget = () => {
         fetchWeatherData()
         setCity("") // clear the input field after search
     }
+    // variables for each piece of weather data
+    let temp = weatherData ? Math.ceil((weatherData.main.temp * 9/5) + 32): null
+    let realFeel = weatherData ? Math.ceil((weatherData.main.feels_like * 9/5) + 32): null
+    let windSpeed = weatherData ? Math.ceil((weatherData.wind.speed) * 2.237): null
+    let pressure = weatherData ? (weatherData.main.pressure * 0.02953).toFixed(2): null
 }
