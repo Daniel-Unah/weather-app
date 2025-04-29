@@ -1,7 +1,7 @@
 import React from 'react';
 import './Favorites.css'; 
 
-const Favorites = ({ favorites, favoriteSelect }) => {
+const Favorites = ({ favorites, favoriteSelect, removeFavorite }) => {
   return (
     <div className="favorites-section">
       {favorites && favorites.length > 0 ? (
@@ -14,6 +14,7 @@ const Favorites = ({ favorites, favoriteSelect }) => {
                 <th>Country</th>
                 <th>Temperature (°F)</th>
                 <th>Description</th>
+                <th>Remove</th>
               </tr>
             </thead>
             <tbody>
@@ -27,6 +28,16 @@ const Favorites = ({ favorites, favoriteSelect }) => {
                   <td>{fav.country}</td>
                   <td>{fav.temp}</td>
                   <td>{fav.description}</td>
+                  <td>
+                    <button onClick={(e) => {
+                        e.stopPropagation(); // prevent row click
+                        removeFavorite(fav.id);
+                    }}
+                    className="remove-btn"
+                    >
+                    ❌
+                    </button>
+                </td>
                 </tr>
               ))}
             </tbody>

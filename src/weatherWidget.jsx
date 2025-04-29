@@ -68,6 +68,11 @@ const WeatherWidget = () => {
     console.log("Current favorites:", favorites);
   };
 
+  const removeFavorite = (id) => {
+    setFavorites(prev => prev.filter(fav => fav.id !== id));
+  };
+  
+
   useEffect(() => {
     localStorage.setItem('favorites', JSON.stringify(favorites));
   }, [favorites]);
@@ -103,7 +108,7 @@ const WeatherWidget = () => {
         )}
       </div>
 
-      <Favorites favorites={favorites} favoriteSelect={handleFavoriteSelect} />
+      <Favorites favorites={favorites} favoriteSelect={handleFavoriteSelect} removeFavorite={removeFavorite}/>
     </>
   );
 };

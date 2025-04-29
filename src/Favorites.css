@@ -23,5 +23,17 @@
     top: 0;
     z-index: 1;
   }
+
+  .remove-btn {
+    background: none;
+    border: none;
+    color: red;
+    font-size: 1.1rem;
+    cursor: pointer;
+  }
+  
+  .remove-btn:hover {
+    color: darkred;
+  }
   
   
