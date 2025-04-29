@@ -5,7 +5,9 @@ import WeatherWidget from './weatherWidget.jsx';
 function App() {
   return (
     <div className="App">
-      <h1 className = "page-title">Weather Forecast App</h1>
+      <div className="page-title">
+        <h1>Weather Forecast App</h1>
+      </div>
       <WeatherWidget />
     </div>
   );

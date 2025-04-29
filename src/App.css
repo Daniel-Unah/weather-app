@@ -1,8 +1,28 @@
-*{
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box; 
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f8ff;
 }
 .page-title {
   text-align: center;
   padding: 10px;
+  background-color: #242424;
+  width: 100vw;
+  margin: 0;
+}
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
+  text-align: center;
 }
