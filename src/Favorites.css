@@ -1,0 +1,27 @@
+.favorites-section{
+    color: #242424;
+    margin-top: 30px;
+    max-height: 300px; 
+    overflow-y: auto;
+}
+.favorites-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .favorites-table th, .favorites-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  .favorites-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+  
+  

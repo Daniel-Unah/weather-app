@@ -1,28 +1,37 @@
 import React from 'react';
+import './Favorites.css'; 
 
-const Favorites = ({favorites}) => {
-    if (!favorites || favorites.length === 0) {
-        return null; // No favorites to display
-    }
-    return (
-        <div className="favorites-section">
-        {favorites.length > 0 ? (
-            <>
-            <h3>Favorites</h3>
-            <ul>
-                {favorites.map(fav => (
-                <li key={fav.id}>
-                    <h4>{fav.name}, {fav.country}</h4>
-                    <p><strong>Temperature:</strong> {fav.temp}°F</p>
-                    <p><strong>Description:</strong> {fav.description}</p>
-                </li>
-                ))}
-            </ul>
-            </>
-        ) : (
-            <p>No favorites added yet.</p>
-        )}
-        </div>
+const Favorites = ({ favorites }) => {
+  return (
+    <div className="favorites-section">
+      {favorites && favorites.length > 0 ? (
+        <>
+          <h3>Favorites</h3>
+          <table className="favorites-table">
+            <thead>
+              <tr>
+                <th>City</th>
+                <th>Country</th>
+                <th>Temperature (°F)</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              {favorites.map(fav => (
+                <tr key={fav.id}>
+                  <td>{fav.name}</td>
+                  <td>{fav.country}</td>
+                  <td>{fav.temp}</td>
+                  <td>{fav.description}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </>
+      ) : (
+        <p></p>
+      )}
+    </div>
   );
 };
 
