@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import API_KEY from './config.js';
+import Favorites from './Favorites.jsx'; // Not addToFavorites!
 
 const WeatherWidget = () => {
   const [city, setCity] = useState("");
   const [weatherData, setWeatherData] = useState(null);
   const [error, setError] = useState(null);
-  const [favorites, setFavorites] = useState([]);
+  const [favorites, setFavorites] = useState([]); // new
 
   const fetchWeatherData = async () => {
     if (!city) return;
@@ -40,51 +41,54 @@ const WeatherWidget = () => {
 
   const addToFavorites = () => {
     if (!weatherData) return;
-  
+
     const newFavorite = {
-      id: weatherData.id, 
+      id: weatherData.id,
       name: weatherData.name,
       country: weatherData.sys.country,
       temp: Math.ceil((weatherData.main.temp * 9/5) + 32),
       description: weatherData.weather[0].description,
     };
-  
+
     setFavorites(prev => {
       if (prev.find(city => city.id === newFavorite.id)) return prev;
       return [...prev, newFavorite];
     });
   };
-  
 
   return (
-    <div className="weather-container">
-      <form className="weather-form" onSubmit={handleSearch}>
-        <input
-          type="text"
-          placeholder="Enter city name"
-          value={city}
-          onChange={handleInputChange}
-        />
-        <button type="submit">Search</button>
-      </form>
+    <>
+      <div className="weather-container">
+        <form className="weather-form" onSubmit={handleSearch}>
+          <input
+            type="text"
+            placeholder="Enter city name"
+            value={city}
+            onChange={handleInputChange}
+          />
+          <button type="submit">Search</button>
+        </form>
 
-      {error && <p className="error">{error}</p>}
+        {error && <p className="error">{error}</p>}
 
-      {weatherData && (
-        <div className="weather-box">
-          <h2>{weatherData.name}, {weatherData.sys.country}</h2>
-          <button onClick={addToFavorites}>Favorite This City</button>
-          <div className="weather-data">
-            <p><strong>Temperature:</strong> {Math.ceil((weatherData.main.temp * 9/5) + 32)}°F</p>
-            <p><strong>Description:</strong> {weatherData.weather[0].description}</p>
-            <p><strong>Feels like:</strong> {Math.ceil((weatherData.main.feels_like * 9/5) + 32)}°F</p>
-            <p><strong>Humidity:</strong> {weatherData.main.humidity}%</p>
-            <p><strong>Pressure:</strong> {(weatherData.main.pressure * 0.02953).toFixed(2)} inHg</p>
-            <p><strong>Wind Speed:</strong> {Math.ceil(weatherData.wind.speed * 2.237)} MPH</p>
+        {weatherData && (
+          <div className="weather-box">
+            <h2>{weatherData.name}, {weatherData.sys.country}</h2>
+            <button onClick={addToFavorites}>Favorite This City</button>
+            <div className="weather-data">
+              <p><strong>Temperature:</strong> {Math.ceil((weatherData.main.temp * 9/5) + 32)}°F</p>
+              <p><strong>Description:</strong> {weatherData.weather[0].description}</p>
+              <p><strong>Feels like:</strong> {Math.ceil((weatherData.main.feels_like * 9/5) + 32)}°F</p>
+              <p><strong>Humidity:</strong> {weatherData.main.humidity}%</p>
+              <p><strong>Pressure:</strong> {(weatherData.main.pressure * 0.02953).toFixed(2)} inHg</p>
+              <p><strong>Wind Speed:</strong> {Math.ceil(weatherData.wind.speed * 2.237)} MPH</p>
+            </div>
           </div>
-        </div>
-      )}
-    </div>
+        )}
+      </div>
+
+      <Favorites favorites={favorites} />
+    </>
   );
 };
 
