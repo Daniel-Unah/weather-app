@@ -38,6 +38,24 @@ const WeatherWidget = () => {
     setCity("");
   };
 
+  const addToFavorites = () => {
+    if (!weatherData) return;
+  
+    const newFavorite = {
+      id: weatherData.id, 
+      name: weatherData.name,
+      country: weatherData.sys.country,
+      temp: Math.ceil((weatherData.main.temp * 9/5) + 32),
+      description: weatherData.weather[0].description,
+    };
+  
+    setFavorites(prev => {
+      if (prev.find(city => city.id === newFavorite.id)) return prev;
+      return [...prev, newFavorite];
+    });
+  };
+  
+
   return (
     <div className="weather-container">
       <form className="weather-form" onSubmit={handleSearch}>
@@ -55,6 +73,7 @@ const WeatherWidget = () => {
       {weatherData && (
         <div className="weather-box">
           <h2>{weatherData.name}, {weatherData.sys.country}</h2>
+          <button onClick={addToFavorites}>Favorite This City</button>
           <div className="weather-data">
             <p><strong>Temperature:</strong> {Math.ceil((weatherData.main.temp * 9/5) + 32)}°F</p>
             <p><strong>Description:</strong> {weatherData.weather[0].description}</p>
