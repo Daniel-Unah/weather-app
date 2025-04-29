@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useState, useEffect} from 'react';
 import API_KEY from './config.js';
 import Favorites from './Favorites.jsx';
 
@@ -6,8 +6,11 @@ const WeatherWidget = () => {
   const [city, setCity] = useState("");
   const [weatherData, setWeatherData] = useState(null);
   const [error, setError] = useState(null);
-  const [favorites, setFavorites] = useState([]);
-
+  const [favorites, setFavorites] = useState(() => {
+    const stored = localStorage.getItem('favorites');
+    return stored ? JSON.parse(stored) : [];
+  });
+  
   const fetchWeatherData = async () => {
     if (!city) return;
     try {
@@ -64,6 +67,10 @@ const WeatherWidget = () => {
     console.log("Added to favorites:", newFavorite);
     console.log("Current favorites:", favorites);
   };
+
+  useEffect(() => {
+    localStorage.setItem('favorites', JSON.stringify(favorites));
+  }, [favorites]);
 
   return (
     <>
