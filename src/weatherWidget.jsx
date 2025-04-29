@@ -5,6 +5,7 @@ const WeatherWidget = () => {
   const [city, setCity] = useState("");
   const [weatherData, setWeatherData] = useState(null);
   const [error, setError] = useState(null);
+  const [favorites, setFavorites] = useState([]);
 
   const fetchWeatherData = async () => {
     if (!city) return;
