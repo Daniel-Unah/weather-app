@@ -1,7 +1,7 @@
 import React from 'react';
 import './Favorites.css'; 
 
-const Favorites = ({ favorites }) => {
+const Favorites = ({ favorites, favoriteSelect }) => {
   return (
     <div className="favorites-section">
       {favorites && favorites.length > 0 ? (
@@ -18,7 +18,11 @@ const Favorites = ({ favorites }) => {
             </thead>
             <tbody>
               {favorites.map(fav => (
-                <tr key={fav.id}>
+                <tr 
+                  key={fav.id}
+                  onClick={() => favoriteSelect(fav.name)}
+                  style={{ cursor: 'pointer' }}
+                >
                   <td>{fav.name}</td>
                   <td>{fav.country}</td>
                   <td>{fav.temp}</td>

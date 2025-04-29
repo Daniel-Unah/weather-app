@@ -10,7 +10,6 @@ function App() {
         <h1>Weather Forecast App</h1>
       </div>
       <WeatherWidget />
-      <Favorites />
     </div>
   );
 }

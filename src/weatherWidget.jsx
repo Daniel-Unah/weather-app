@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import API_KEY from './config.js';
-import Favorites from './Favorites.jsx'; // Not addToFavorites!
+import Favorites from './Favorites.jsx';
 
 const WeatherWidget = () => {
   const [city, setCity] = useState("");
   const [weatherData, setWeatherData] = useState(null);
   const [error, setError] = useState(null);
-  const [favorites, setFavorites] = useState([]); 
+  const [favorites, setFavorites] = useState([]);
 
   const fetchWeatherData = async () => {
     if (!city) return;
@@ -37,6 +37,13 @@ const WeatherWidget = () => {
     e.preventDefault();
     fetchWeatherData();
     setCity("");
+  };
+
+  const handleFavoriteSelect = (cityName) => {
+    setCity(cityName);
+    setTimeout(() => {
+      fetchWeatherData();
+    }, 0);
   };
 
   const addToFavorites = () => {
@@ -89,7 +96,7 @@ const WeatherWidget = () => {
         )}
       </div>
 
-      <Favorites favorites={favorites} />
+      <Favorites favorites={favorites} favoriteSelect={handleFavoriteSelect} />
     </>
   );
 };
