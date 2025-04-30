@@ -46,6 +46,7 @@
     border-radius: 5px;
     height: 40px;
     box-sizing: border-box;
+    width: 40vw;
   }
   
   .weather-form button {
