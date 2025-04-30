@@ -35,6 +35,14 @@
     text-align: center;
     color: #242424;
   }
+
+  .weather-box, .placeholderBox {
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  }
   
   .weather-form {
     display: flex; 
@@ -46,9 +54,10 @@
   
   .weather-form input[type="text"] {
     flex: 1; 
+    font-size: 1rem;
     padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
     height: 40px;
     box-sizing: border-box;
     width: 40vw;
@@ -56,6 +65,7 @@
   
   .weather-form button {
     padding: 10px 20px;
+    transition: background-color 0.3s ease;
     background-color: #242424; 
     color: #fff;
     border: none;
@@ -68,7 +78,7 @@
   }
   
   .weather-form button:hover {
-    background-color: black;
+    background-color: #1d4ed8;
   }
   
   
