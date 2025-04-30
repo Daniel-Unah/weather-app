@@ -14,8 +14,15 @@
   }
 
   .weather-icon{
-    display: flex;
+    background-color: #242424;
+    padding: 10px;
+    border-radius: 50%;
+    display: inline-flex;
     justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
   }
   
   .weather-box {
@@ -37,7 +44,7 @@
   }
 
   .weather-box, .placeholderBox {
-    background-color: #ffffff;
+    background-color: #F5F5F5;
     border: 1px solid #cbd5e1;
     border-radius: 16px;
     padding: 24px;
@@ -67,7 +74,7 @@
     padding: 10px 20px;
     transition: background-color 0.3s ease;
     background-color: #242424; 
-    color: #fff;
+    color: #F5F5F5;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -75,6 +82,10 @@
     height: 40px; 
     display: flex;
     align-items: center;
+  }
+
+  .favorite-city-button {
+    background-color: #242424;
   }
   
   .weather-form button:hover {
@@ -121,7 +132,7 @@
     color: #888;
     height: 400px; 
     width: 500px;
-    background-color: #e4e4e4;
+    background-color: #F5F5F5;
   }
   
   @media (max-width: 768px) {

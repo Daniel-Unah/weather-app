@@ -100,7 +100,7 @@ const WeatherWidget = () => {
                   style={{ width: '80px', height: '80px' }}
                 />
               </div>
-              <button onClick={addToFavorites}>Favorite This City</button>
+              <button className="favorite-city-button" onClick={addToFavorites}>Favorite This City</button>
               <div className="weather-data">
                 <p><strong>Temperature:</strong> {Math.ceil((weatherData.main.temp * 9/5) + 32)}°F</p>
                 <p><strong>Description:</strong> {weatherData.weather[0].description}</p>
