@@ -10,12 +10,11 @@ A responsive weather forecasting web application that allows users to view real-
 - ✨ **Responsive Design** — Mobile-friendly layout with clean transitions
 - 📍 **Weather Icons** — Displays dynamic weather condition icons
 - 💾 **Local Storage** — Favorites persist between page reloads
-- 💅 **Modern UI** — Uses custom font and color palette for a polished feel
 
 ## 🛠️ Tech Stack
 
 - **React** (Vite)
-- **CSS Modules**
+- **CSS**
 - **OpenWeatherMap API**
 - **LocalStorage**
 
