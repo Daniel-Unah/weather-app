@@ -1,6 +1,7 @@
 .favorites-section{
     color: #242424;
-    margin-top: 8vh;
+    margin-top: 0;
+    width: 500px;
     max-height: 300px; 
     overflow-y: auto;
 }
