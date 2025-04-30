@@ -114,6 +114,28 @@
     background-color: #e4e4e4;
   }
   
+  @media (max-width: 768px) {
+    .widget-row {
+      flex-direction: column;
+      align-items: center;
+    }
   
-
+    .weather-box,
+    .placeholderBox,
+    .weather-container,
+    .favorites-section {
+      width: 90vw;
+      max-width: 500px;
+      height: auto;
+    }
+  
+    .weather-form input[type="text"] {
+      width: 70vw;
+    }
+  
+    .favorites-table {
+      font-size: 0.9rem;
+    }
+  }
+  
   

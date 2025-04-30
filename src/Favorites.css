@@ -1,21 +1,27 @@
-.favorites-section{
+.favorites-section {
     color: #242424;
-    margin-top: 10px;
-    padding-top: 0;
     width: 500px;
-    height: 400px; 
+    max-height: 400px;
     overflow-y: auto;
     border: 2px solid #242424;
     border-radius: 25px;
     background-color: #e4e4e4;
-}
-.favorites-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
+    padding: 10px;
   }
   
-  .favorites-table th, .favorites-table td {
+  .favorites-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+  }
+  
+  .favorites-table {
+    width: 100%;
+    min-width: 500px;
+    border-collapse: collapse;
+  }
+  
+  .favorites-table th,
+  .favorites-table td {
     border: 1px solid #ddd;
     padding: 8px;
     text-align: center;
@@ -28,7 +34,7 @@
     top: 0;
     z-index: 1;
   }
-
+  
   .remove-btn {
     background: none;
     border: none;
@@ -40,16 +46,36 @@
   .remove-btn:hover {
     color: darkred;
   }
-
-  #placeholderText{
+  
+  #placeholderText {
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     color: #888;
-    height: 400px; 
+    min-height: 200px;
+    text-align: center;
   }
-  #tableTitle{
+  
+  #tableTitle {
     padding-top: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .favorites-section {
+      width: 90vw;
+      max-width: 500px;
+      height: auto;
+    }
+  
+    .favorites-table th,
+    .favorites-table td {
+      padding: 6px;
+      font-size: 0.9rem;
+    }
+  
+    .favorites-table {
+      min-width: 400px;
+    }
   }
   
