@@ -16,7 +16,7 @@
   .weather-box {
     margin-bottom: 0;
     padding-bottom: 0;
-    background-color: #ffffff; 
+    background-color: #e4e4e4; 
     padding: 20px;
     border-radius: 25px;
     border: 2px solid #132320; 
@@ -92,6 +92,18 @@
     gap: 40px;
     flex-wrap: wrap;
   }
+
+  .placeholderBox {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: #132320 2px solid;
+    border-radius: 25px;
+    color: #888;
+    height: 400px; 
+  }
+  
   
 
   

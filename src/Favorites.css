@@ -2,8 +2,11 @@
     color: #242424;
     margin-top: 0;
     width: 500px;
-    max-height: 300px; 
+    height: 400px; 
     overflow-y: auto;
+    border: 2px solid #132320;
+    border-radius: 25px;
+    background-color: #e4e4e4;
 }
 .favorites-table {
     width: 100%;
@@ -36,5 +39,16 @@
   .remove-btn:hover {
     color: darkred;
   }
-  
+
+  #placeholderText{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #888;
+    height: 400px; 
+  }
+  #tableTitle{
+    padding-top: 10px;
+  }
   

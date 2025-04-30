@@ -92,7 +92,7 @@ const WeatherWidget = () => {
         <div className="weather-container">
           {error && <p className="error">{error}</p>}
 
-          {weatherData && (
+          {weatherData ? (
             <div className="weather-box">
               <h2>{weatherData.name}, {weatherData.sys.country}</h2>
               <img
@@ -109,6 +109,10 @@ const WeatherWidget = () => {
                 <p><strong>Pressure:</strong> {(weatherData.main.pressure * 0.02953).toFixed(2)} inHg</p>
                 <p><strong>Wind Speed:</strong> {Math.ceil(weatherData.wind.speed * 2.237)} MPH</p>
               </div>
+            </div>
+          ) : (
+            <div className="placeholderBox">
+              <p>Enter a city's name to see it's current weather information.</p>
             </div>
           )}
         </div>

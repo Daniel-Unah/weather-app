@@ -6,7 +6,7 @@ const Favorites = ({ favorites, favoriteSelect, removeFavorite }) => {
     <div className="favorites-section">
       {favorites && favorites.length > 0 ? (
         <>
-          <h3>Favorites</h3>
+          <h3 id="tableTitle">Favorites</h3>
           <table className="favorites-table">
             <thead>
               <tr>
@@ -30,7 +30,7 @@ const Favorites = ({ favorites, favoriteSelect, removeFavorite }) => {
                   <td>{fav.description}</td>
                   <td>
                     <button onClick={(e) => {
-                        e.stopPropagation(); // prevent row click
+                        e.stopPropagation(); 
                         removeFavorite(fav.id);
                     }}
                     className="remove-btn"
@@ -44,7 +44,7 @@ const Favorites = ({ favorites, favoriteSelect, removeFavorite }) => {
           </table>
         </>
       ) : (
-        <p></p>
+        <p id="placeholderText">Add a city to favorites and it will show up here.</p>
       )}
     </div>
   );
