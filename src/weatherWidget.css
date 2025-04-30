@@ -16,11 +16,13 @@
   .weather-box {
     margin-bottom: 0;
     padding-bottom: 0;
+    margin-top: 0;
+    padding-top: 0;
     background-color: #e4e4e4; 
     padding: 20px;
     border-radius: 25px;
-    border: 2px solid #132320; 
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid #242424; 
+    height: 400px;
     width: 500px;
     display: grid;
     grid-template-rows: auto auto auto;
@@ -48,7 +50,7 @@
   
   .weather-form button {
     padding: 10px 20px;
-    background-color: #132320; 
+    background-color: #242424; 
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -60,7 +62,7 @@
   }
   
   .weather-form button:hover {
-    background-color: #212121;
+    background-color: black;
   }
   
   
@@ -98,10 +100,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border: #132320 2px solid;
+    border: #242424 2px solid;
     border-radius: 25px;
     color: #888;
     height: 400px; 
+    width: 500px;
+    background-color: #e4e4e4;
   }
   
   

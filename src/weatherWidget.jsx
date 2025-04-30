@@ -90,8 +90,6 @@ const WeatherWidget = () => {
         </form>
       <div className="widget-row">
         <div className="weather-container">
-          {error && <p className="error">{error}</p>}
-
           {weatherData ? (
             <div className="weather-box">
               <h2>{weatherData.name}, {weatherData.sys.country}</h2>
