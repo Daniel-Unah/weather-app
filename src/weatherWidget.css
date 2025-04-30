@@ -12,6 +12,11 @@
     font-family: Arial, sans-serif;
     color: #242424;
   }
+
+  .weather-icon{
+    display: flex;
+    justify-content: center;
+  }
   
   .weather-box {
     margin-bottom: 0;

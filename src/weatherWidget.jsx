@@ -93,11 +93,13 @@ const WeatherWidget = () => {
           {weatherData ? (
             <div className="weather-box">
               <h2>{weatherData.name}, {weatherData.sys.country}</h2>
-              <img
-                src={`https://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png`}
-                alt={weatherData.weather[0].description}
-                style={{ width: '80px', height: '80px' }}
-              />
+              <div className="weather-icon">
+                <img
+                  src={`https://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png`}
+                  alt={weatherData.weather[0].description}
+                  style={{ width: '80px', height: '80px' }}
+                />
+              </div>
               <button onClick={addToFavorites}>Favorite This City</button>
               <div className="weather-data">
                 <p><strong>Temperature:</strong> {Math.ceil((weatherData.main.temp * 9/5) + 32)}°F</p>
