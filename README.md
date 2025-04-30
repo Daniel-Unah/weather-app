@@ -19,12 +19,6 @@ A responsive weather forecasting web application that allows users to view real-
 - **OpenWeatherMap API**
 - **LocalStorage**
 
-## 📸 Demo
-
-![weather app demo screenshot](https://via.placeholder.com/800x400?text=Demo+Screenshot)
-
-> Replace the image link above with a real screenshot if you have one.
-
 ## 📦 Installation
 
 ```bash
