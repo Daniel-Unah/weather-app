@@ -8,6 +8,7 @@
     background-color: #F5F5F5;
     padding: 20px;
     margin-top: 10px;
+    min-height: 400px;
   }
   
   .favorites-table-wrapper {

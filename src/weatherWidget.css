@@ -84,6 +84,10 @@
     align-items: center;
   }
 
+  input{
+    background-color: #242424;
+  }
+
   .favorite-city-button {
     background-color: #242424;
   }
