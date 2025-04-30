@@ -51,13 +51,12 @@
   }
   
   #placeholderText {
-    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     color: #888;
     min-height: 200px;
-    text-align: center;
+    margin-top: 80px;
   }
   
   #tableTitle {
