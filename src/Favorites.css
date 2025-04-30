@@ -1,0 +1,83 @@
+.favorites-section {
+    color: #242424;
+    width: 500px;
+    max-height: 400px;
+    overflow-y: auto;
+    border: 1px solid #cbd5e1;
+    border-radius: 16px;
+    background-color: #F5F5F5;
+    padding: 20px;
+    margin-top: 10px;
+    min-height: 400px;
+  }
+  
+  .favorites-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+  }
+  
+  .favorites-table {
+    width: 100%;
+    min-width: 300px;
+    border-collapse: collapse;
+  }
+  
+  .favorites-table th,
+  .favorites-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+    color: 1e293b;
+  }
+  
+  .favorites-table th {
+    background-color: #e2e8f0;
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+  
+  .remove-btn {
+    background: none;
+    border: none;
+    color: #ef4444ed;
+    font-size: 1.1rem;
+    cursor: pointer;
+  }
+  
+  .remove-btn:hover {
+    color: #b91c1c;
+  }
+  
+  #placeholderText {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #888;
+    min-height: 200px;
+    margin-top: 80px;
+  }
+  
+  #tableTitle {
+    padding-top: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .favorites-section {
+      width: 90vw;
+      max-width: 500px;
+      height: auto;
+    }
+  
+    .favorites-table th,
+    .favorites-table td {
+      padding: 6px;
+      font-size: 0.9rem;
+    }
+  
+    .favorites-table {
+      min-width: 400px;
+    }
+  }
+  

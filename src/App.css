@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f0f8ff;
+  overflow-x: hidden;
+  font-family: 'Inter', sans-serif;
+}
+
+
+
+.page-title {
+  text-align: center;
+  padding: 20px;
+  background-color: #242424;
+  width: 100vw;
+  margin-bottom: 5vh;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+}
+
